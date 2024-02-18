@@ -1,0 +1,516 @@
+{
+	"info": {
+		"_postman_id": "58afe90f-d7c8-4a95-a51f-53337faec34e",
+		"name": "Picturest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27257950"
+	},
+	"item": [
+		{
+			"name": "Register a new user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"longpro@gmxcxailc.ccm\",\n    \"hoTen\": \"The Undertaker\",\n    \"tuoi\": 25,\n    \"matKhau\": \"matKhauBiMat\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/auth/register",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"a@g.cc\",\n    \"matKhau\": \"123456\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/auth/login",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get user by ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/users/:id",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"users",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "rec_cn87ejumpd9u1gks0iag"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update user information",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pRHVuZ0lkIjoicmVjX2NuODdlanVtcGQ5dTFna3MwaWFnIiwia2V5IjoxNzA4MTYyOTg5NDgyfSwiaWF0IjoxNzA4MTYyOTg5LCJleHAiOjE3MDgxNjI5OTJ9.siT27Vm5rvICk8YqarnZIpM8KhNjxizoCxFQQn7FV2M",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"hoTen\": \"John Boy\",\n    \"tuoi\": 50,\n    \"email\": \"a@g.cc\",\n    \"matKhau\": \"123456\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/users/:id",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"users",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "rec_cn87ejumpd9u1gks0iag"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload user avatar",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pRHVuZ0lkIjoicmVjX2NuODdlanVtcGQ5dTFna3MwaWFnIiwia2V5IjoxNzA4MTYzMDQ1MTg0fSwiaWF0IjoxNzA4MTYzMDQ1LCJleHAiOjE3MDgxNjMwNDh9.v3-UBZ0FIykFQanvQ8Vq1PFUcc6b7zBXtRNNAzwC0EI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/phanq/Downloads/render-community-large-icon-removebg-preview.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/users/avatar/:id",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"users",
+						"avatar",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "rec_cn87ejumpd9u1gks0iag"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all pictures",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/pictures",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"pictures"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload a picture",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pRHVuZ0lkIjoicmVjX2NuODdlanVtcGQ5dTFna3MwaWFnIiwia2V5IjoxNzA4MTYzMDQ1MTg0fSwiaWF0IjoxNzA4MTYzMDQ1LCJleHAiOjE3MDgxNjMwNDh9.v3-UBZ0FIykFQanvQ8Vq1PFUcc6b7zBXtRNNAzwC0EI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/phanq/Downloads/render-community-large-icon-removebg-preview.png"
+						},
+						{
+							"key": "moTa",
+							"value": "Android 18",
+							"type": "text"
+						},
+						{
+							"key": "tenHinh",
+							"value": "akatsuki",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/pictures",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"pictures"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search pictures by name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/pictures/search-by-name/:name",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"pictures",
+						"search-by-name",
+						":name"
+					],
+					"variable": [
+						{
+							"key": "name",
+							"value": "akatsuki"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get picture by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/pictures/:id",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"pictures",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "rec_cn8dtv0nfihp7nrkptag"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete picture by ID",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pRHVuZ0lkIjoicmVjX2NuODdlanVtcGQ5dTFna3MwaWFnIiwia2V5IjoxNzA4MTg2ODk3ODYxfSwiaWF0IjoxNzA4MTg2ODk3LCJleHAiOjE3MDgxODY5MDB9.V76OyonIj7WKbp0czIXZpW9q8vhwAKnS9Jab6AFhcTM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{BASE_URL}}/pictures/:id",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"pictures",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "rec_cn8bid0nfihp7nrkpeo0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get pictures created by user ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/pictures/created-by-user/:id",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"pictures",
+						"created-by-user",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "rec_cn87ejumpd9u1gks0iag"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get comments for a picture",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/comments/:id",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"comments",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "rec_cn8dtv0nfihp7nrkptag"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add a comment to a picture",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pRHVuZ0lkIjoicmVjX2NuODdlanVtcGQ5dTFna3MwaWFnIiwia2V5IjoxNzA4MTg2ODk3ODYxfSwiaWF0IjoxNzA4MTg2ODk3LCJleHAiOjE3MDgxODY5MDB9.V76OyonIj7WKbp0czIXZpW9q8vhwAKnS9Jab6AFhcTM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"noiDung\": \"aa\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/comments/:id",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"comments",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "rec_cn8dtv0nfihp7nrkptag"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Determine whether the user has saved a picture or not",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pRHVuZ0lkIjoicmVjX2NuODdlanVtcGQ5dTFna3MwaWFnIiwia2V5IjoxNzA4MjI5NzQxMTczfSwiaWF0IjoxNzA4MjI5NzQxLCJleHAiOjE3MDgyMjk3NDR9.7qNUVVYJdyZYlGdnm42cyhbPk0ElD0DFHDtstAsh0A8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{BASE_URL}}/saved/:id",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"saved",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "rec_cn8dtv0nfihp7nrkptag"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save a picture for a user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pRHVuZ0lkIjoicmVjX2NuODdlanVtcGQ5dTFna3MwaWFnIiwia2V5IjoxNzA4MjI5NzQxMTczfSwiaWF0IjoxNzA4MjI5NzQxLCJleHAiOjE3MDgyMjk3NDR9.7qNUVVYJdyZYlGdnm42cyhbPk0ElD0DFHDtstAsh0A8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{BASE_URL}}/saved/:id",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"saved",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "rec_cn8dtv0nfihp7nrkptag"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get pictures saved by user ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/saved/saved-by-user/:id",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"saved",
+						"saved-by-user",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "rec_cn87ejumpd9u1gks0iag"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
