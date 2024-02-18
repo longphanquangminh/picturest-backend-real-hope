@@ -78,6 +78,6 @@ export const postComment = async (request, response) => {
   };
 
   await xata.db.binh_luan.create(userComment);
-  responseData(response, "Comment successfully!", "", 200);
+  responseData(response, "Comment successfully!", userComment, 200);
   return;
 };

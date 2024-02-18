@@ -4,29 +4,6 @@ import { buildClient } from "@xata.io/client";
 /** @type { SchemaTables } */
 const tables = [
   {
-    name: "tag",
-    columns: [
-      { name: "name", type: "string", notNull: true, defaultValue: "gallery" },
-    ],
-    revLinks: [{ column: "tag", table: "tag-to-image" }],
-  },
-  {
-    name: "image",
-    columns: [
-      { name: "name", type: "string", notNull: true, defaultValue: "Image" },
-      { name: "image", type: "file" },
-    ],
-    revLinks: [{ column: "image", table: "tag-to-image" }],
-  },
-  {
-    name: "tag-to-image",
-    columns: [
-      { name: "image", type: "link", link: { table: "image" } },
-      { name: "tag", type: "link", link: { table: "tag" } },
-    ],
-  },
-  { name: "demo", columns: [] },
-  {
     name: "nguoi_dung",
     columns: [
       { name: "email", type: "string" },

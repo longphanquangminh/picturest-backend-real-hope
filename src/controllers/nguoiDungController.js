@@ -4,6 +4,7 @@ import { queryColumnOfUser } from "../constants/variables.js";
 import { getXataClient } from "../xata.js";
 import bcrypt from "bcrypt";
 import dotenv from "dotenv";
+import { getImageNameAndType } from "../constants/utils.js";
 
 dotenv.config();
 const xata = getXataClient();
@@ -89,7 +90,7 @@ export const editUserInfo = async (request, response) => {
     const file = request.file;
 
     if (file) {
-      updateFields.anh_dai_dien = file.filename;
+      updateFields.anh_dai_dien = getImageNameAndType(file.path);
     }
 
     if (tuoi) {
@@ -160,7 +161,7 @@ export const editUserAvatar = async (request, response) => {
     };
 
     if (file) {
-      updateFields.anh_dai_dien = file.filename;
+      updateFields.anh_dai_dien = getImageNameAndType(file.path);
     }
 
     await xata.db.nguoi_dung.update(accessToken.data.nguoiDungId, updateFields);

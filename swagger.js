@@ -26,10 +26,16 @@ export default {
             schema: {
               type: "object",
               properties: {
-                email: { type: "string" },
+                email: {
+                  type: "string",
+                  format: "email",
+                },
                 hoTen: { type: "string" },
                 tuoi: { type: "number" },
-                matKhau: { type: "string" },
+                matKhau: {
+                  type: "string",
+                  minLength: 6,
+                },
               },
               required: ["email", "hoTen", "tuoi", "matKhau"],
             },
@@ -51,8 +57,14 @@ export default {
             schema: {
               type: "object",
               properties: {
-                email: { type: "string" },
-                matKhau: { type: "string" },
+                email: {
+                  type: "string",
+                  format: "email",
+                },
+                matKhau: {
+                  type: "string",
+                  minLength: 6,
+                },
               },
               required: ["email", "matKhau"],
             },

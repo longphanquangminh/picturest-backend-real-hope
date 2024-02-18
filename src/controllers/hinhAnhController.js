@@ -3,6 +3,7 @@ import { getXataClient } from "../xata.js";
 import dotenv from "dotenv";
 import { decodeToken } from "../config/jwt.js";
 import { queryColumnOfImage } from "../constants/variables.js";
+import { getImageNameAndType } from "../constants/utils.js";
 
 dotenv.config();
 const xata = getXataClient();
@@ -182,14 +183,13 @@ export const postPicture = async (request, response) => {
     const newPicture = {
       mo_ta: moTa,
       ten_hinh: tenHinh,
-      duong_dan: file.filename,
+      duong_dan: getImageNameAndType(file.path),
       nguoi_dung: accessToken.data.nguoiDungId,
     };
 
     await xata.db.hinh_anh.create(newPicture);
-    console.log(process.cwd());
 
-    responseData(response, "Add image successfully!", process.cwd() + "/public/imgs/" + file.filename, 200);
+    responseData(response, "Add image successfully!", newPicture, 200);
     return;
   } catch {
     responseData(response, "Error ...", "", 500);

@@ -1,0 +1,12 @@
+{
+  "id": "mig_cn8umt11gq77ugv415ag",
+  "parentID": "mig_cn7o2mgp7gddig0kbq4g",
+  "checksum": "1:50969166b6a4dd1aefa24cfc4172660ffc8c57a596c55852b486ddafc291219e",
+  "operations": [
+    {
+      "removeTable": {
+        "table": "tag-to-image"
+      }
+    }
+  ]
+}
