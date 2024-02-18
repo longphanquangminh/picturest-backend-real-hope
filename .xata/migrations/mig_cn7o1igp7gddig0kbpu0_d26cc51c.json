@@ -1,0 +1,16 @@
+{
+  "id": "mig_cn7o1igp7gddig0kbpu0",
+  "parentID": "mig_cn7o1ch1gq77ugv40sr0",
+  "checksum": "1:d26cc51c5013756a9bc289e2207105bff9bd2c6724640fa3a355df30b74a5928",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "ngay_luu",
+          "type": "datetime"
+        },
+        "table": "luu_anh"
+      }
+    }
+  ]
+}

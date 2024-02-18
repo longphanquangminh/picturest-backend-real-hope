@@ -1,0 +1,16 @@
+{
+  "id": "mig_cn7o06p1gq77ugv40sog",
+  "parentID": "mig_cn7o04gp7gddig0kbpqg",
+  "checksum": "1:8d489e678f91cc8149fabb42f4bd11214063c72d925cdfbb661e82d69b627d05",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "mo_ta",
+          "type": "string"
+        },
+        "table": "hinh_anh"
+      }
+    }
+  ]
+}

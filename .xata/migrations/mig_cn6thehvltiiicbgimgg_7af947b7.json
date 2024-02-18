@@ -1,0 +1,16 @@
+{
+  "id": "mig_cn6thehvltiiicbgimgg",
+  "parentID": "mig_cn6thcpvltiiicbgimd0",
+  "checksum": "1:7af947b78688f2c3beb7d8d97c8df4798742bbc43e64333ee63cdd783cdcbc03",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "anh_dai_dien",
+          "type": "string"
+        },
+        "table": "nguoi_dung"
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "mig_cn7o2mgp7gddig0kbq4g",
+  "parentID": "mig_cn7o2hop7gddig0kbq3g",
+  "checksum": "1:3c143d79b5ef0dc2c6a7d10523bba3fd6560c27e8ea68522355a1a3da913f813",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "noi_dung",
+          "type": "string"
+        },
+        "table": "binh_luan"
+      }
+    }
+  ]
+}

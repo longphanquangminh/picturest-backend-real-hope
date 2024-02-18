@@ -1,0 +1,12 @@
+{
+  "id": "mig_cn6tgkfi6bgnvtmh3edg",
+  "parentID": "mig_cn6c239a13a9jlkcq7ig",
+  "checksum": "1:fe6f109c0192870f7c1377c72b6c073445555f3ae297215a5a1281976cbbd26a",
+  "operations": [
+    {
+      "addTable": {
+        "table": "nguoi_dung"
+      }
+    }
+  ]
+}

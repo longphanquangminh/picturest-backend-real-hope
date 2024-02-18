@@ -1,0 +1,16 @@
+{
+  "id": "mig_cn7o04gp7gddig0kbpqg",
+  "parentID": "mig_cn7o00h1gq77ugv40sng",
+  "checksum": "1:8d2a27099d0b0f47a2380848e39843c416443b7e6638efa545045d4d64fbff44",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "duong_dan",
+          "type": "string"
+        },
+        "table": "hinh_anh"
+      }
+    }
+  ]
+}

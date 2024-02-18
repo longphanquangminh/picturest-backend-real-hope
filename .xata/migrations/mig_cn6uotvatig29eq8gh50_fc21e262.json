@@ -1,0 +1,16 @@
+{
+  "id": "mig_cn6uotvatig29eq8gh50",
+  "parentID": "mig_cn6thhpvltiiicbgimhg",
+  "checksum": "1:fc21e26252a049402ec9447221b1b6c2d3db634e044928334613edafec908242",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "ngay_sinh",
+          "type": "datetime"
+        },
+        "table": "nguoi_dung"
+      }
+    }
+  ]
+}

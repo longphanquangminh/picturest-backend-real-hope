@@ -1,0 +1,19 @@
+{
+  "id": "mig_cn7o1op1gq77ugv40st0",
+  "parentID": "mig_cn7o1m91gq77ugv40ss0",
+  "checksum": "1:55cbfedabd73e009b5f923770ae02679bf49ac13a3684759d7a6ef2aa32bae7c",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "hinh_anh",
+          "type": "link",
+          "link": {
+            "table": "hinh_anh"
+          }
+        },
+        "table": "luu_anh"
+      }
+    }
+  ]
+}

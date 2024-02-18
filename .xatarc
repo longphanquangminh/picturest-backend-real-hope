@@ -1,0 +1,7 @@
+{
+  "databaseURL": "https://Long-Phan-Quang-Minh-s-workspace-kvk057.ap-southeast-2.xata.sh/db/picturest",
+  "codegen": {
+    "output": "src/xata.js",
+    "moduleType": "esm"
+  }
+}

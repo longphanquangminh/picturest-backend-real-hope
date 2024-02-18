@@ -1,0 +1,16 @@
+{
+  "id": "mig_cn6th5vi6bgnvtmh3emg",
+  "parentID": "mig_cn6tgkfi6bgnvtmh3edg",
+  "checksum": "1:b99d36e9b47163e853c9a0430b16fe7b25a215c5f361077476736333f6e39313",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "email",
+          "type": "string"
+        },
+        "table": "nguoi_dung"
+      }
+    }
+  ]
+}

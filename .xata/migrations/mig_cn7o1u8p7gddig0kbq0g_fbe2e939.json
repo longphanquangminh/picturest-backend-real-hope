@@ -1,0 +1,19 @@
+{
+  "id": "mig_cn7o1u8p7gddig0kbq0g",
+  "parentID": "mig_cn7o1qgp7gddig0kbpvg",
+  "checksum": "1:fbe2e9395610a33862c3b4db0a600a44237ebf1f85f0a3c3c9b6b0cf8693665e",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "nguoi_dung",
+          "type": "link",
+          "link": {
+            "table": "nguoi_dung"
+          }
+        },
+        "table": "binh_luan"
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "mig_cn7o2ah1gq77ugv40su0",
+  "parentID": "mig_cn7o27gp7gddig0kbq1g",
+  "checksum": "1:85141434da0eda37c09448eb360e5cc866d8b72b1c43499f026449bf1e148174",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "ngay_binh_luan",
+          "type": "datetime"
+        },
+        "table": "binh_luan"
+      }
+    }
+  ]
+}

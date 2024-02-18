@@ -1,0 +1,16 @@
+{
+  "id": "mig_cn6thhpvltiiicbgimhg",
+  "parentID": "mig_cn6thehvltiiicbgimgg",
+  "checksum": "1:4194f7c81533623b0a7bb94b6587d6cc6c8ab5ad98234c6f8c2d7cb3182dd2c5",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "tuoi",
+          "type": "int"
+        },
+        "table": "nguoi_dung"
+      }
+    }
+  ]
+}
