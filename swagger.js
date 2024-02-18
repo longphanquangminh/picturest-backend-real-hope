@@ -35,7 +35,7 @@ export default {
             },
           },
         ],
-        responses: {},
+        responses: { 200: { description: "Success" } },
         tags: ["Authentication"],
       },
     },
@@ -58,14 +58,14 @@ export default {
             },
           },
         ],
-        responses: {},
+        responses: { 200: { description: "Success" } },
         tags: ["Authentication"],
       },
     },
     "/pictures": {
       get: {
         summary: "Get all pictures",
-        responses: {},
+        responses: { 200: { description: "Success" } },
         tags: ["Pictures"],
       },
       post: {
@@ -77,7 +77,7 @@ export default {
           { name: "moTa", in: "formData", required: true, type: "string" },
           { name: "tenHinh", in: "formData", required: true, type: "string" },
         ],
-        responses: {},
+        responses: { 200: { description: "Success" } },
         tags: ["Pictures"],
       },
     },
@@ -85,7 +85,7 @@ export default {
       get: {
         summary: "Search pictures by name",
         parameters: [{ name: "name", in: "path", type: "string", required: true }],
-        responses: {},
+        responses: { 200: { description: "Success" } },
         tags: ["Pictures"],
       },
     },
@@ -93,7 +93,7 @@ export default {
       get: {
         summary: "Get picture by ID",
         parameters: [{ name: "id", in: "path", type: "string", required: true }],
-        responses: {},
+        responses: { 200: { description: "Success" } },
         tags: ["Pictures"],
       },
       delete: {
@@ -102,7 +102,7 @@ export default {
           { name: "id", in: "path", required: true, type: "string" },
           { name: "token", in: "header", required: true, type: "string" },
         ],
-        responses: {},
+        responses: { 200: { description: "Success" } },
         tags: ["Pictures"],
       },
     },
@@ -110,7 +110,7 @@ export default {
       get: {
         summary: "Get comments for a picture",
         parameters: [{ name: "id", in: "path", type: "string", required: true }],
-        responses: {},
+        responses: { 200: { description: "Success" } },
         tags: ["Comments"],
       },
       post: {
@@ -132,7 +132,7 @@ export default {
             },
           },
         ],
-        responses: {},
+        responses: { 200: { description: "Success" } },
         tags: ["Comments"],
       },
     },
@@ -143,7 +143,7 @@ export default {
           { name: "id", in: "path", required: true, type: "string" },
           { name: "token", in: "header", required: true, type: "string" },
         ],
-        responses: {},
+        responses: { 200: { description: "Success" } },
         tags: ["Saving"],
       },
       post: {
@@ -152,7 +152,7 @@ export default {
           { name: "id", in: "path", required: true, type: "string" },
           { name: "token", in: "header", required: true, type: "string" },
         ],
-        responses: {},
+        responses: { 200: { description: "Success" } },
         tags: ["Saving"],
       },
     },
@@ -160,7 +160,7 @@ export default {
       get: {
         summary: "Get user by ID",
         parameters: [{ name: "id", in: "path", required: true, type: "string" }],
-        responses: {},
+        responses: { 200: { description: "Success" } },
         tags: ["Users"],
       },
       put: {
@@ -185,7 +185,7 @@ export default {
             },
           },
         ],
-        responses: {},
+        responses: { 200: { description: "Success" } },
         tags: ["Users"],
       },
     },
@@ -193,7 +193,7 @@ export default {
       get: {
         summary: "Get pictures saved by user ID",
         parameters: [{ name: "userId", in: "path", required: true, type: "string" }],
-        responses: {},
+        responses: { 200: { description: "Success" } },
         tags: ["Saving"],
       },
     },
@@ -201,8 +201,8 @@ export default {
       get: {
         summary: "Get pictures created by user ID",
         parameters: [{ name: "userId", in: "path", required: true, type: "string" }],
-        responses: {},
-        tags: ["Saving"],
+        responses: { 200: { description: "Success" } },
+        tags: ["Pictures"],
       },
     },
     "/users/avatar/{id}": {
@@ -214,7 +214,7 @@ export default {
           { name: "token", in: "header", required: true, type: "string" },
           { name: "file", in: "formData", required: true, type: "file" },
         ],
-        responses: {},
+        responses: { 200: { description: "Success" } },
         tags: ["Users"],
       },
     },
