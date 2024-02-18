@@ -175,8 +175,9 @@ export const postPicture = async (request, response) => {
     };
 
     await xata.db.hinh_anh.create(newPicture);
+    console.log(process.cwd());
 
-    responseData(response, "Add image successfully!", file.filename, 200);
+    responseData(response, "Add image successfully!", process.cwd() + "/public/imgs/" + file.filename, 200);
     return;
   } catch {
     responseData(response, "Error ...", "", 500);
