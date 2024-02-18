@@ -56,9 +56,21 @@ export const getPicturesById = async (request, response) => {
       responseData(response, "Can't find image!", "", 400);
       return;
     }
-    // const countLove = await this.luuAnhRepository.count({ where: { hinh: { hinhId: +pictureId } } });
-    // responseData(response, "Success", { savedCount: countLove, data: picture }, 200);
-    responseData(response, "Success", { data: picture }, 200);
+    const savedCount = await xata.db.luu_anh.aggregate({
+      totalCount: {
+        count: {
+          filter: { $any: { hinh_anh: { id: pictureId } } },
+        },
+      },
+    });
+    const commentCount = await xata.db.binh_luan.aggregate({
+      totalCount: {
+        count: {
+          filter: { $any: { hinh_anh: { id: pictureId } } },
+        },
+      },
+    });
+    responseData(response, "Success", { savedCount: savedCount.aggs.totalCount, commentCount: commentCount.aggs.totalCount, data: picture }, 200);
   } catch {
     responseData(response, "Error ...", "", 500);
   }

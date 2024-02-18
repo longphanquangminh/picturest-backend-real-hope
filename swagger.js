@@ -3,7 +3,7 @@ export default {
   info: {
     version: "1.0.0",
     title: "Capstone API",
-    description: "API for Capstone project",
+    description: "API for Capstone project – Long Phan",
   },
   basePath: "/",
   tags: [
