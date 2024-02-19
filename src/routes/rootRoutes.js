@@ -9,8 +9,7 @@ import luuAnhRoutes from "./luuAnhRoutes.js";
 
 const rootRoute = express.Router();
 
-app.use(`/swagger`, swaggerUi.serve, swaggerUi.setup(swaggerDocument));
-
+rootRoute.use(`/swagger`, swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 rootRoute.use("/auth", authRoutes);
 rootRoute.use("/users", nguoiDungRoutes);
 rootRoute.use("/pictures", hinhAnhRoutes);
