@@ -119,7 +119,7 @@ export const getSavedPicturesByUser = async (request, response) => {
       .filter({
         id: userId,
       })
-      .getFirst();
+      .getMany();
 
     if (!user) {
       responseData(response, "User does not exist!", "", 400);
