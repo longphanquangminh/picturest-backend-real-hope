@@ -28,7 +28,7 @@ export const getPicturesByName = async (request, response) => {
 
     const data = await xata.db.hinh_anh
       .select(queryColumnOfImage)
-      .filter({ $any: { ten_hinh: { $contains: pictureName } } })
+      .filter({ $any: { ten_hinh: { $contains: [pictureName, pictureName.toLowerCase()] } } })
       .getMany();
     const count = await xata.db.hinh_anh.aggregate({
       totalCount: {
