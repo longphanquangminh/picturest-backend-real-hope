@@ -119,14 +119,14 @@ export const getSavedPicturesByUser = async (request, response) => {
       .filter({
         id: userId,
       })
-      .getMany();
+      .getFirst();
 
     if (!user) {
       responseData(response, "User does not exist!", "", 400);
       return;
     }
 
-    const savedPictures = await xata.db.luu_anh.select(queryColumnOfSave).filter({ "nguoi_dung.id": userId }).getFirst();
+    const savedPictures = await xata.db.luu_anh.select(queryColumnOfSave).filter({ "nguoi_dung.id": userId }).getMany();
 
     if (savedPictures.length === 0) {
       responseData(response, "User does not have any saved pictures!", [], 200);
