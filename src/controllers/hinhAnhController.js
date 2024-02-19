@@ -10,7 +10,7 @@ const xata = getXataClient();
 
 export const getPictures = async (_, response) => {
   try {
-    const data = await xata.db.hinh_anh.select(queryColumnOfImage).getMany();
+    const data = await xata.db.hinh_anh.select(queryColumnOfImage).sort("xata.createdAt", "desc").getMany();
     const count = await xata.db.hinh_anh.aggregate({
       totalCount: {
         count: "*",
