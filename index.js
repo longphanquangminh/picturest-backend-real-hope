@@ -13,3 +13,5 @@ app.use(rootRoute);
 app.listen(port, () => {
   console.log(`⚡ Server is running at ${port}`);
 });
+
+export const handler = serverless(app);
