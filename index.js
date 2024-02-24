@@ -11,7 +11,7 @@ app.use(cors());
 app.use(rootRoute);
 
 app.listen(port, () => {
-  console.log(`⚡ Server is running at ${port}`);
+  console.log(`⚡ Server is running at port:${port}`);
 });
 
 export const handler = serverless(app);
