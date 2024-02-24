@@ -9,6 +9,7 @@ app.use(express.json());
 app.use(cors());
 
 app.use(rootRoute);
+app.use("/.netlify/functions/api", rootRoute);
 
 app.listen(port, () => {
   console.log(`⚡ Server is running at port:${port}`);
