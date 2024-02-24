@@ -1,5 +1,5 @@
 import express from "express";
-import { default as swaggerDocument } from "../../swagger.js";
+import { default as swaggerDocument } from "../swagger.js";
 import swaggerUi from "swagger-ui-express";
 import authRoutes from "./authRoutes.js";
 import nguoiDungRoutes from "./nguoiDungRoutes.js";
