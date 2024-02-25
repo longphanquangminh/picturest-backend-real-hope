@@ -13,7 +13,7 @@ app.use(rootRoute);
 app.use("/.netlify/functions/api", rootRoute);
 
 app.listen(port, () => {
-  console.log(`⚡ Server is running and listening at port:${port}`);
+  console.log(`⚡ Server is running at port:${port}`);
 });
 
 export const handler = ServerlessHttp(app);
